@@ -1,0 +1,47 @@
+#!/usr/bin/env node
+
+/**
+ * module dependencies
+ */
+var app = require( '../app' )
+var config = require( '../config/app' )
+var error = require( 'net-server-event-error' )
+var fs = require( 'fs' )
+var https = require( 'https' )
+var listening = require( 'net-server-event-listening' )
+var normalizePort = require( 'normalize-port' )
+
+/**
+ * get port from environment and store in express
+ */
+var port = normalizePort( config.port )
+app.set( 'port', port )
+
+/**
+ * get server ip from environment
+ */
+var ip_address = config.ip_address.toString()
+
+/**
+ * ssl options
+ */
+var ssloptions = {
+  cert: fs.readFileSync( config.ssl.crt ),
+  key: fs.readFileSync( config.ssl.key )
+}
+
+/**
+ * create HTTP server
+ */
+var server = https.createServer( ssloptions, app )
+
+/**
+ * server event listeners
+ */
+server.on( 'error', error )
+server.on( 'listening', listening )
+
+/**
+ * listen on provided port, on all network interfaces
+ */
+server.listen( port, ip_address )

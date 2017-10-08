@@ -1,0 +1,27 @@
+{
+  "name": "mongoose-helpers-setup-db-express-example",
+  "version": "0.1.0",
+  "description": "illustrates how to use mongoose-helpers-setup-db with express",
+  "author": "dan entous",
+  "license": "MIT",
+  "main": "app.js",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www"
+  },
+  "devDependencies": {
+    "nodemon": "1.17.1"
+  },
+  "dependencies": {
+    "error-logger": "git+https://github.com/dan-nl/error-logger.git",
+    "express": "4.16.2",
+    "file-exists": "5.0.1",
+    "http-server-request-handlers-db": "git+https://github.com/http-server-request-handlers/db.git",
+    "mongoose": "4.13.11",
+    "mongoose-helpers-setup-db": "git+https://github.com/mongoose-helpers/setup-db.git",
+    "net-server-event-error": "git+https://github.com/net-server-events/error.git",
+    "net-server-event-listening": "git+https://github.com/net-server-events/listening.git",
+    "normalize-port": "1.0.0",
+    "not-found": "git+https://github.com/http-server-request-handlers/not-found"
+  }
+}

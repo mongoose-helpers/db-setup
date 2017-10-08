@@ -1,0 +1,6 @@
+{
+  "database": "mongodb",
+  "debug": true,
+  "password": "mongopassword",
+  "username": "mongodbuser"
+}

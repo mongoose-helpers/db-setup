@@ -1,0 +1,6 @@
+{
+  "database": "<your database>",
+  "debug": false,
+  "password": "<your databae password>",
+  "username": "<your database username>"
+}
