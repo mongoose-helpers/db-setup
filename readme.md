@@ -53,6 +53,8 @@ function setupDb( user_options )
 
 ## usage
 ### basic
+also see the [examples](examples/express) directory
+
 ```javascript
 var express = require( 'express' )
 var connection = require( 'mongoose-helpers-connection' )

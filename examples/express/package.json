@@ -19,7 +19,7 @@
     "http-server-request-handlers-error-logger": "0.1.0",
     "http-server-request-handlers-not-found": "0.1.0",
     "mongoose": "4.13.11",
-    "mongoose-helpers-setup-db": "0.1.0",
+    "mongoose-helpers-setup-db": "0.1.1",
     "net-server-events-error": "0.1.0",
     "net-server-events-listening": "0.1.1",
     "normalize-port": "1.0.0"
