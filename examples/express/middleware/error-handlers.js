@@ -1,7 +1,7 @@
 'use strict'
 
-var notFound = require( 'not-found' )
-var errorLogger = require( 'error-logger' )
+var notFound = require( 'http-server-request-handlers-not-found' )
+var errorLogger = require( 'http-server-request-handlers-error-logger' )
 
 /**
  * @param {Function} app

@@ -9,7 +9,7 @@ var path = require( 'path' )
 /**
  * module variables
  */
-var config_path = path.join( __dirname, 'config.js' )
+var config_path = path.join( __dirname, 'config.json' )
 
 if ( !fileExists.sync( config_path ) ) {
   throw new Error(

@@ -5,10 +5,10 @@
  */
 var app = require( '../app' )
 var config = require( '../config/app' )
-var error = require( 'net-server-event-error' )
+var error = require( 'net-server-events-error' )
 var fs = require( 'fs' )
 var https = require( 'https' )
-var listening = require( 'net-server-event-listening' )
+var listening = require( 'net-server-events-listening' )
 var normalizePort = require( 'normalize-port' )
 
 /**

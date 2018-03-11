@@ -32,6 +32,6 @@
     "ghooks": "2.0.2"
   },
   "dependencies": {
-    "mongoose-helpers-connection": "0.1.0"
+    "mongoose-helpers-connection": "0.1.2"
   }
 }
