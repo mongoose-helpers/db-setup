@@ -1,7 +1,11 @@
 # mongoose-helpers-setup-db
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![NSP Status][nsp-image]][nsp-url]
 
-returns a function that will return a mongoose connection promise when called.
+returns a function that will return a mongoose connection promise when called; it should be used in conjunction with the [http-server-request-handlers-db module](https://github.com/http-server-request-handlers/db).
+
+the initial intent of this module is to provide a way to re-initialize a mongoose connection, on an http request, if the connection threw an error, on application startup or was lost after startup.
+
+see the [examples](examples/express) directory for an actual implementation using these two modules together.
 
 ## table of contents
 * [notes](#notes)
@@ -53,8 +57,6 @@ function setupDb( user_options )
 
 ## usage
 ### basic
-also see the [examples](examples/express) directory
-
 ```javascript
 var express = require( 'express' )
 var connection = require( 'mongoose-helpers-connection' )
@@ -101,11 +103,13 @@ setupDb( options )
     }
   )
 
-// elsewhere in your app
+// elsewhere in your app on a route
 app.db.model( 'User' )
   .findOne(
     { 'id': id },
-    function( err, existing_user ) {}
+    function( err, existing_user ) {
+       ...
+    }
   )
 ```
 
